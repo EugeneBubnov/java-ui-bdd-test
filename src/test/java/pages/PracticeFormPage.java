@@ -44,18 +44,17 @@ public class PracticeFormPage {
     }
 
     public void clickOnSubmitButton() {
-        $("#submit").press(Keys.PAGE_DOWN)
-                .hover()
-                .shouldBe(Condition.visible)
-                .shouldBe(Condition.enabled)
-                .click();
+        step("Нажать кнопку: Submit", () ->
+                $("#submit").press(Keys.PAGE_DOWN).hover().shouldBe(Condition.visible).shouldBe(Condition.enabled).click()
+        );
     }
 
     public void assertThatSubmitIsSuccessful() {
-        $("#example-modal-sizes-title-lg").shouldBe(Condition.visible).shouldHave(
-                Condition.text("Thanks for submitting the form")
-        );
-
-        $(".table-responsive").shouldBe(Condition.visible);
+        step("Убедиться, что форма отправлена успешно", () -> {
+            $("#example-modal-sizes-title-lg").shouldBe(Condition.visible).shouldHave(
+                    Condition.text("Thanks for submitting the form")
+            );
+            $(".table-responsive").shouldBe(Condition.visible);
+        });
     }
 }
