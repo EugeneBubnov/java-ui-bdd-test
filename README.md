@@ -21,7 +21,6 @@
 | JUnit Platform Suite | 5.11+ | Запуск Cucumber через JUnit 5 |
 | Cucumber | 7.34.7 | BDD-фреймворк |
 | Selenide | 7.17.0 | Обёртка над Selenium |
-| Selenium | 4.46.0 | Управление браузером |
 | Allure | 2.30.0 | Отчёты |
 
 ---
