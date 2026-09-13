@@ -7,7 +7,7 @@ import io.cucumber.java.en.When;
 import pages.PracticeFormPage;
 
 public class PracticeFormStep {
-    PracticeFormPage practiceFormPage = new PracticeFormPage();
+    private final PracticeFormPage practiceFormPage = new PracticeFormPage();
 
     @Given("Открыть страницу {string}")
     public void openPage(String url) {
